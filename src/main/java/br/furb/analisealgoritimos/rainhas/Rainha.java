@@ -4,19 +4,19 @@ package br.furb.analisealgoritimos.rainhas;
  * Queen.java
  * basedao no codigo de Timothy Budd
  */
-public class Queen {
-    private short linha;
-    private final short coluna;
-    private final Queen vizinho;
+public class Rainha {
+    private int linha;
+    private final int coluna;
+    private final Rainha vizinha;
 
-    public Queen(short c, Queen q) {
-        coluna = c;
+    public Rainha(int coluna, Rainha vizinha) {
+        this.coluna = coluna;
         linha = 1;
-        vizinho = q;
+        this.vizinha = vizinha;
     }
 
     public boolean achaSolucao() {
-        while (vizinho != null && vizinho.podeAtacar(linha, coluna))
+        while (vizinha != null && vizinha.temConflito(linha, coluna))
             if (!avanca())
                 return false;
         return true;
@@ -27,10 +27,10 @@ public class Queen {
             linha++;
             return achaSolucao();
         }
-        if (vizinho != null) {
-            if (!vizinho.avanca())
+        if (vizinha != null) {
+            if (!vizinha.avanca())
                 return false;
-            if (!vizinho.achaSolucao())
+            if (!vizinha.achaSolucao())
                 return false;
         } else
             return false;
@@ -38,23 +38,23 @@ public class Queen {
         return achaSolucao();
     }
 
-    private boolean podeAtacar(int tlin, int tcol) {
+    private boolean temConflito(int tlin, int tcol) {
         int colDif = tcol - coluna;
         if ((linha == tlin) || (linha + colDif == tlin) ||
                 (linha - colDif == tlin))
             return true;
-        if (vizinho != null)
-            return vizinho.podeAtacar(tlin, tcol);
+        if (vizinha != null)
+            return vizinha.temConflito(tlin, tcol);
         return false;
     }
 
     public String toString() {
-        return ("(" + coluna + ", " + linha + ")");
+        return ("[" + coluna + ", " + linha + "]");
     }
 
     public void imprime() {
-        if (vizinho != null)
-            vizinho.imprime();
+        if (vizinha != null)
+            vizinha.imprime();
         System.out.println(this);
     }
 }
