@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="463cf943-a7f6-4102-8c79-789975b8ebc5" name="Changes" comment="Solução usando hill-climbing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="463cf943-a7f6-4102-8c79-789975b8ebc5" name="Changes" comment="Ajustes em alguns nomes e cleanup">
       <change beforePath="$PROJECT_DIR$/src/main/java/br/furb/analisealgoritimos/rainhas/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/furb/analisealgoritimos/rainhas/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/furb/analisealgoritimos/rainhas/Rainha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/furb/analisealgoritimos/rainhas/Rainha.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +53,9 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.br.furb.analisealgoritimos.rainhas.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -107,7 +105,7 @@
       <workItem from="1653522003748" duration="1761000" />
       <workItem from="1653767913088" duration="71000" />
       <workItem from="1653769158194" duration="479000" />
-      <workItem from="1653852910372" duration="11421000" />
+      <workItem from="1653852910372" duration="11591000" />
     </task>
     <task id="LOCAL-00001" summary="Solução usando hill-climbing">
       <created>1653864394689</created>
@@ -116,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653864394689</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ajustes em alguns nomes e cleanup">
+      <created>1653866054387</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653866054387</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Solução usando hill-climbing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solução usando hill-climbing" />
+    <MESSAGE value="Ajustes em alguns nomes e cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustes em alguns nomes e cleanup" />
   </component>
 </project>

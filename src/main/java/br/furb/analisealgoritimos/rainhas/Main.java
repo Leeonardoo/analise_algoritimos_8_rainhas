@@ -9,6 +9,8 @@ import java.util.Scanner;
  * <p>
  * Implementação da solução do problema n-rainhas usando hill climbing
  * e reiniciando ao encontrar planícies.
+ *
+ * Os tabuleiros são gerados de forma aleatória.
  */
 public class Main {
     private static final Random random = new Random();
