@@ -25,11 +25,16 @@ public class Rainha {
         linha++;
     }
 
+    //Verifica se uma rainha faz conflito com uma outra (mesma linha, coluna ou diagonal)
     public boolean temConflito(Rainha r) {
         if (coluna == r.getColuna() || linha == r.getLinha()) {
             return true;
         } else {
             return Math.abs(coluna - r.getColuna()) == Math.abs(linha - r.getLinha());
         }
+    }
+
+    public static Rainha copiar(Rainha rainha) {
+        return new Rainha(rainha.getLinha(), rainha.getColuna());
     }
 }

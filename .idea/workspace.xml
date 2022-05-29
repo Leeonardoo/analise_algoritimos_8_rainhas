@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="463cf943-a7f6-4102-8c79-789975b8ebc5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="463cf943-a7f6-4102-8c79-789975b8ebc5" name="Changes" comment="Solução usando hill-climbing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/furb/analisealgoritimos/rainhas/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/furb/analisealgoritimos/rainhas/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/furb/analisealgoritimos/rainhas/Rainha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/furb/analisealgoritimos/rainhas/Rainha.java" afterDir="false" />
@@ -108,8 +107,16 @@
       <workItem from="1653522003748" duration="1761000" />
       <workItem from="1653767913088" duration="71000" />
       <workItem from="1653769158194" duration="479000" />
-      <workItem from="1653852910372" duration="9863000" />
+      <workItem from="1653852910372" duration="11421000" />
     </task>
+    <task id="LOCAL-00001" summary="Solução usando hill-climbing">
+      <created>1653864394689</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653864394689</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,5 +132,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Solução usando hill-climbing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solução usando hill-climbing" />
   </component>
 </project>

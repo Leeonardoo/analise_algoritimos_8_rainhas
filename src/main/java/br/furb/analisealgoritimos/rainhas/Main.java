@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * @author Larson Kremer Vicente
  * @author Leonardo de Oliveira
- *
+ * <p>
  * Implementação da solução do problema n-rainhas usando hill climbing
  * e reiniciando ao encontrar planícies.
  */
@@ -95,12 +95,12 @@ public class Main {
     }
 
     public static Rainha[] minimizarConflitos(Rainha[] tabuleiroAtual) {
-        Rainha[] proximoTabuleiro = new Rainha[n];
+        Rainha[] melhorTabuleiro = new Rainha[n];
         Rainha[] auxTabuleiro = new Rainha[n];
 
         for (int i = 0; i < n; i++) {
-            Rainha rainha = new Rainha(tabuleiroAtual[i].getLinha(), tabuleiroAtual[i].getColuna());
-            proximoTabuleiro[i] = rainha;
+            Rainha rainha = Rainha.copiar(tabuleiroAtual[i]);
+            melhorTabuleiro[i] = rainha;
             auxTabuleiro[i] = rainha;
         }
 
@@ -110,7 +110,7 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             if (i > 0) {
-                auxTabuleiro[i - 1] = new Rainha(tabuleiroAtual[i - 1].getLinha(), tabuleiroAtual[i - 1].getColuna());
+                auxTabuleiro[i - 1] = Rainha.copiar(tabuleiroAtual[i - 1]);
             }
             auxTabuleiro[i] = new Rainha(0, auxTabuleiro[i].getColuna());
             for (int j = 0; j < n; j++) {
@@ -119,7 +119,7 @@ public class Main {
                 if (auxConflitos < menorConflitos) {
                     menorConflitos = auxConflitos;
                     for (int k = 0; k < n; k++) {
-                        proximoTabuleiro[k] = new Rainha(auxTabuleiro[k].getLinha(), auxTabuleiro[k].getColuna());
+                        melhorTabuleiro[k] = Rainha.copiar(auxTabuleiro[k]);
                     }
                 }
 
@@ -129,16 +129,18 @@ public class Main {
             }
         }
 
+        //Se a heuristica (número de conflitos) for igual a anterior depois de passar
+        //por todas as colunas, então geramos um novo tabuleiro pois chegamos em uma planície.
         if (menorConflitos == conflitosAtuais) {
-            proximoTabuleiro = novoTabuleiro();
+            melhorTabuleiro = novoTabuleiro();
+            numeroConflitos = getConflitos(melhorTabuleiro);
             totalReinicios++;
-            numeroConflitos = getConflitos(proximoTabuleiro);
         } else {
             numeroConflitos = menorConflitos;
         }
 
         totalPassos++;
-        return proximoTabuleiro;
+        return melhorTabuleiro;
     }
 
     public static Rainha[] buscaSolucao(Rainha[] tabuleiroInicial) {
